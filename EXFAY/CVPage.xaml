@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EXFAY.CVPage"
+             Title="CV">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <LinearGradientBrush x:Key="PageBackgroundBrush">
+                <GradientStop Color="LightBlue" Offset="0.0"/>
+                <GradientStop Color="Blue" Offset="2.0"/>
+            </LinearGradientBrush>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <ScrollView Background="{StaticResource PageBackgroundBrush}">
+            <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+                <Label Text="Anibal Martin Yucailla Padilla" 
+                       FontSize="24" TextColor="Black"
+                       HorizontalOptions="Center" />
+
+                <Image Source="anibal.jpg"
+                       WidthRequest="200"
+                       HeightRequest="200"
+                       HorizontalOptions="Center"
+                       Margin="10"/>
+
+                <Label Text="ESTUDIOS" 
+                       FontAttributes="Bold" 
+                       FontSize="20" TextColor="Black"
+                       HorizontalOptions="Center"
+                       Margin="10"/>
+                <Label Text="Universidad de las Fuerzas Armadas ESPE"
+                       FontSize="16" TextColor="Black"
+                       HorizontalOptions="Center" />
+                <Label Text="Instituto Tecnológico Internacional"
+                       FontSize="16" TextColor="Black"
+                       HorizontalOptions="Center" />
+
+                <Label Text="EXPERIENCIA LABORAL" 
+                       FontAttributes="Bold" 
+                       FontSize="20" TextColor="Black"
+                       HorizontalOptions="Center"
+                       Margin="10"/> 
+                <Label Text="Soporte técnico en el área de TI"
+                       FontSize="16" TextColor="Black"
+                       HorizontalOptions="Center" />
+                <Label Text="Atención al cliente en el área de hospitalidad"
+                       FontSize="16" TextColor="Black"
+                       HorizontalOptions="Center" />
+
+                <Label Text="HOBBIES" 
+                       FontAttributes="Bold" 
+                       FontSize="20" TextColor="Black"
+                       HorizontalOptions="Center"
+                       Margin="10"/>
+                <Label Text="Básquet"
+                       FontSize="16" TextColor="Black"
+                       HorizontalOptions="Center" />
+                <Label Text="Fútbol"
+                       FontSize="16" TextColor="Black"
+                       HorizontalOptions="Center" />
+                <Label Text="Danza"
+                       FontSize="16" TextColor="Black"
+                       HorizontalOptions="Center" />
+
+                <!-- Pie de página con botones de navegación -->
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="20">
+                    <Button Text="CV" Clicked="OnCVButtonClicked" TextColor="White"/>
+                    <Button Text="IMC" Clicked="OnIMCButtonClicked"  TextColor="White" />
+                    <Button Text="Login" Clicked="OnLoginButtonClicked"  TextColor="White" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+
+    

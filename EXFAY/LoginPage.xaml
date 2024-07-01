@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EXFAY.LoginPage"
+             Title="Login">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <FileImageSource x:Key="BackgroundImage" File="ds.jpg"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="{StaticResource BackgroundImage}" Aspect="AspectFill" Opacity="0.3"/>
+
+            <StackLayout Padding="20" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                <Entry x:Name="UsuarioEntry" Placeholder="Usuario" Margin="0,20" TextColor="White" PlaceholderColor="White"/>
+                <Entry x:Name="PasswordEntry" Placeholder="Contraseña" IsPassword="True" Margin="0,20" TextColor="White" PlaceholderColor="White"/>
+                <Button Text="Login" Clicked="OnLoginClicked"/>
+                <Label x:Name="LoginMessage" TextColor="White" HorizontalOptions="Center" Margin="20"/>
+
+                <!-- Pie de página con botones de navegación -->
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="20">
+                    <Button Text="CV" Clicked="OnCVButtonClicked"/>
+                    <Button Text="IMC" Clicked="OnIMCButtonClicked"/>
+                    <Button Text="Login" Clicked="OnLoginButtonClicked"/>
+                </StackLayout>
+                
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+
+    
